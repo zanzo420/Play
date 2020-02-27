@@ -94,7 +94,7 @@ public class ContentDownloadSceneController : MonoBehaviour, INeedInjection
             }
             catch (Exception ex)
             {
-                AddToLog(ex.Message);
+                Debug.LogException(ex);
                 break;
             }
             statusLabel.text = Math.Round(req.downloadProgress * 100) + "%";
